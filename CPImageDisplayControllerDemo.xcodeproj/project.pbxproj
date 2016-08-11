@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1326FF9AE351B949B09429C4 /* libPods-CPImageDisplayControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDD2F4A80821B33F608B433 /* libPods-CPImageDisplayControllerDemo.a */; };
 		BBD25BC21D5B1F90000989AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD25BC11D5B1F90000989AE /* main.m */; };
 		BBD25BC51D5B1F90000989AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD25BC41D5B1F90000989AE /* AppDelegate.m */; };
 		BBD25BC81D5B1F90000989AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD25BC71D5B1F90000989AE /* ViewController.m */; };
 		BBD25BCB1D5B1F90000989AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD25BC91D5B1F90000989AE /* Main.storyboard */; };
 		BBD25BCD1D5B1F90000989AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD25BCC1D5B1F90000989AE /* Assets.xcassets */; };
 		BBD25BD01D5B1F90000989AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD25BCE1D5B1F90000989AE /* LaunchScreen.storyboard */; };
+		BBD25BE61D5B262D000989AE /* CPImageDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD25BE31D5B262D000989AE /* CPImageDisplayController.m */; };
+		BBD25BE71D5B262D000989AE /* UIView+CPGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD25BE51D5B262D000989AE /* UIView+CPGrid.m */; };
+		BBD25BEA1D5B3AFB000989AE /* CPImageDisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD25BE91D5B3AFB000989AE /* CPImageDisplayCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17525933CCA4DA0EE5E9006A /* Pods-CPImageDisplayControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPImageDisplayControllerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CPImageDisplayControllerDemo/Pods-CPImageDisplayControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3A24D13C663B914D9D0B7583 /* Pods-CPImageDisplayControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPImageDisplayControllerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CPImageDisplayControllerDemo/Pods-CPImageDisplayControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BBD25BBD1D5B1F8F000989AE /* CPImageDisplayControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPImageDisplayControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD25BC11D5B1F90000989AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BBD25BC31D5B1F90000989AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +32,13 @@
 		BBD25BCC1D5B1F90000989AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBD25BCF1D5B1F90000989AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBD25BD11D5B1F90000989AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBD25BE21D5B262D000989AE /* CPImageDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPImageDisplayController.h; sourceTree = "<group>"; };
+		BBD25BE31D5B262D000989AE /* CPImageDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPImageDisplayController.m; sourceTree = "<group>"; };
+		BBD25BE41D5B262D000989AE /* UIView+CPGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CPGrid.h"; sourceTree = "<group>"; };
+		BBD25BE51D5B262D000989AE /* UIView+CPGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CPGrid.m"; sourceTree = "<group>"; };
+		BBD25BE81D5B3AFB000989AE /* CPImageDisplayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPImageDisplayCell.h; sourceTree = "<group>"; };
+		BBD25BE91D5B3AFB000989AE /* CPImageDisplayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPImageDisplayCell.m; sourceTree = "<group>"; };
+		DCDD2F4A80821B33F608B433 /* libPods-CPImageDisplayControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CPImageDisplayControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +46,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1326FF9AE351B949B09429C4 /* libPods-CPImageDisplayControllerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FEC18EBF149842D7EA42A78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A24D13C663B914D9D0B7583 /* Pods-CPImageDisplayControllerDemo.debug.xcconfig */,
+				17525933CCA4DA0EE5E9006A /* Pods-CPImageDisplayControllerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BBD25BB41D5B1F8F000989AE = {
 			isa = PBXGroup;
 			children = (
+				BBD25BE11D5B262D000989AE /* CPImageDisplayController */,
 				BBD25BBF1D5B1F90000989AE /* CPImageDisplayControllerDemo */,
 				BBD25BBE1D5B1F8F000989AE /* Products */,
+				8FEC18EBF149842D7EA42A78 /* Pods */,
+				F63236A8CA2FA9F1F325C998 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +105,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BBD25BE11D5B262D000989AE /* CPImageDisplayController */ = {
+			isa = PBXGroup;
+			children = (
+				BBD25BE21D5B262D000989AE /* CPImageDisplayController.h */,
+				BBD25BE31D5B262D000989AE /* CPImageDisplayController.m */,
+				BBD25BE81D5B3AFB000989AE /* CPImageDisplayCell.h */,
+				BBD25BE91D5B3AFB000989AE /* CPImageDisplayCell.m */,
+				BBD25BE41D5B262D000989AE /* UIView+CPGrid.h */,
+				BBD25BE51D5B262D000989AE /* UIView+CPGrid.m */,
+			);
+			path = CPImageDisplayController;
+			sourceTree = "<group>";
+		};
+		F63236A8CA2FA9F1F325C998 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCDD2F4A80821B33F608B433 /* libPods-CPImageDisplayControllerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBD25BD41D5B1F90000989AE /* Build configuration list for PBXNativeTarget "CPImageDisplayControllerDemo" */;
 			buildPhases = (
+				ACDF9BB084161BBFB17AB8F6 /* Check Pods Manifest.lock */,
 				BBD25BB91D5B1F8F000989AE /* Sources */,
 				BBD25BBA1D5B1F8F000989AE /* Frameworks */,
 				BBD25BBB1D5B1F8F000989AE /* Resources */,
+				C56BC7D117675504EDFC6ABC /* Embed Pods Frameworks */,
+				143B5B75DFC2F7BF8B4BF525 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,14 +194,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		143B5B75DFC2F7BF8B4BF525 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CPImageDisplayControllerDemo/Pods-CPImageDisplayControllerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACDF9BB084161BBFB17AB8F6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C56BC7D117675504EDFC6ABC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CPImageDisplayControllerDemo/Pods-CPImageDisplayControllerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BBD25BB91D5B1F8F000989AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD25BE71D5B262D000989AE /* UIView+CPGrid.m in Sources */,
 				BBD25BC81D5B1F90000989AE /* ViewController.m in Sources */,
+				BBD25BE61D5B262D000989AE /* CPImageDisplayController.m in Sources */,
 				BBD25BC51D5B1F90000989AE /* AppDelegate.m in Sources */,
 				BBD25BC21D5B1F90000989AE /* main.m in Sources */,
+				BBD25BEA1D5B3AFB000989AE /* CPImageDisplayCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +362,7 @@
 		};
 		BBD25BD51D5B1F90000989AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A24D13C663B914D9D0B7583 /* Pods-CPImageDisplayControllerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CPImageDisplayControllerDemo/Info.plist;
@@ -272,6 +374,7 @@
 		};
 		BBD25BD61D5B1F90000989AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17525933CCA4DA0EE5E9006A /* Pods-CPImageDisplayControllerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CPImageDisplayControllerDemo/Info.plist;
@@ -300,6 +403,7 @@
 				BBD25BD61D5B1F90000989AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
