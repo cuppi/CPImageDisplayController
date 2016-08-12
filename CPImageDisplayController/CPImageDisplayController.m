@@ -16,9 +16,6 @@
     UICollectionView *_collectionView;
     CGFloat _screenWidth;
     CGFloat _screenHeight;
-    NSInteger _lastTimerTick;
-    CGPoint _finalContentOffset;
-    CADisplayLink *_displayLink;
 }
 @end
 
@@ -28,6 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createMetadata];
+    [self configureViewController];
     [self createCollectionView];
 }
 
@@ -35,6 +33,11 @@
 {
     _screenWidth = [UIScreen mainScreen].bounds.size.width;
     _screenHeight = [UIScreen mainScreen].bounds.size.height;
+}
+
+- (void)configureViewController
+{
+    self.view.backgroundColor = [UIColor blackColor];
 }
 
 - (void)createCollectionView
@@ -51,8 +54,12 @@
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [_collectionView registerClass:[CPImageDisplayCell class] forCellWithReuseIdentifier:ReuseCPImageDisplayCell];
-    
-    
+}
+
+- (void)setImageUrls:(NSArray<NSURL *> *)imageUrls
+{
+    _imageUrls = [NSArray arrayWithArray:imageUrls];
+    [_collectionView reloadData];
 }
 
 #pragma mark -- CADisplay
@@ -108,6 +115,11 @@
     CPImageDisplayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ReuseCPImageDisplayCell forIndexPath:indexPath];
     cell.imageUrl = _imageUrls[indexPath.row];
     cell.backgroundColor = [UIColor clearColor];
+    [cell setSingleTapBlock:^{
+        if (_singleTapBlock) {
+            _singleTapBlock(indexPath.row, _imageUrls[indexPath.row]);
+        }
+    }];
     return cell;
 }
 

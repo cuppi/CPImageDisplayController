@@ -15,7 +15,7 @@
 @end
 
 @interface CPImageDisplayController : UIViewController
-
+@property (copy, nonatomic) void(^singleTapBlock)(NSInteger index, NSURL *url);
 @property (assign, nonatomic) id<CPImageDisplayControllerDelegate> delegate;
 @property (retain, nonatomic) NSArray <NSURL *>*imageUrls;
 @end

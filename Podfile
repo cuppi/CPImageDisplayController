@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'CPImageDisplayControllerDemo' do
-pod 'SDWebImage'
-pod 'pop'
+pod 'SDWebImage', '~>3.7'
+pod 'pop', '~> 1.0'
 end
 

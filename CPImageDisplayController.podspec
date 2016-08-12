@@ -9,4 +9,6 @@ Pod::Spec.new do |s|
   s.source_files = 'CPImageDisplayController/*'
   s.requires_arc = true
   s.framework = 'UIKit'
+  s.dependency 'pop'
+  s.dependency 'SDWebImage'
 end
