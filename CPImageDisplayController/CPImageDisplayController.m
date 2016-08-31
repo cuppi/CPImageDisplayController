@@ -27,6 +27,7 @@
     [self createMetadata];
     [self configureViewController];
     [self createCollectionView];
+    [self viewFillData];
 }
 
 - (void)createMetadata
@@ -62,6 +63,21 @@
     [_collectionView reloadData];
 }
 
+- (void)setSelectedImageIndex:(NSInteger)selectedImageIndex
+{
+    if (selectedImageIndex < 0) {
+        return;
+    }
+    _selectedImageIndex = selectedImageIndex;
+    _collectionView.contentOffset = CGPointMake(selectedImageIndex*(_collectionView.cp_width + 20), 0);
+}
+
+- (void)viewFillData
+{
+    [_collectionView reloadData];
+    _collectionView.contentOffset = CGPointMake(_selectedImageIndex*(_collectionView.cp_width + 20), 0);
+}
+
 #pragma mark -- CADisplay
 
 - (void)didReceiveMemoryWarning {
@@ -91,7 +107,7 @@
         fragment - 10 >= scrollView.cp_width*0.5) {
         fullCount += velocity.x >= 0?1:0;
     }
-
+    
     NSInteger minIndex = 0;
     NSInteger maxIndex = MAX(0, (scrollView.contentSize.width + 20)/(_screenWidth + 20) - 1);
     fullCount = MAX(minIndex, fullCount);
